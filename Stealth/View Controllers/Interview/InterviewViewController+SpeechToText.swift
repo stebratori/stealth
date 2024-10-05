@@ -9,6 +9,16 @@ import Foundation
 import AVFoundation
 
 extension InterviewViewController: SpeechRecognitionServiceDelegate {
+    func didStopRecording() {
+        recordingDidStop()
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    func didFailWithError(_ error: any Error) {
+        <#code#>
+    }
+    
     func processAudioBuffer(_ buffer: AVAudioPCMBuffer) { }
     
     func didReceiveTranscribedText(_ text: String) {
@@ -20,11 +30,6 @@ extension InterviewViewController: SpeechRecognitionServiceDelegate {
 //        })
     }
 
-    func stop() {
-        recordingDidStop()
-        timer?.invalidate()
-        timer = nil
-    }
     
     func recordingDidStop() {
         
