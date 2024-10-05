@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F1152E922CAB3CB8006867C3 /* CircleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152E912CAB3CB8006867C3 /* CircleAnimationView.swift */; };
+		F1152E942CAB3CE7006867C3 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152E932CAB3CE7006867C3 /* HomePageViewController.swift */; };
+		F1152E972CAC00CD006867C3 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1152E962CAC00CD006867C3 /* ReSwift */; };
+		F1152E9B2CAC0106006867C3 /* ChatGPTState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152E9A2CAC0106006867C3 /* ChatGPTState.swift */; };
+		F1152E9E2CAC0150006867C3 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152E9D2CAC0150006867C3 /* Actions.swift */; };
+		F1152EA12CAC0179006867C3 /* ChatGPTReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152EA02CAC0179006867C3 /* ChatGPTReducer.swift */; };
+		F1152EA32CAC019A006867C3 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152EA22CAC019A006867C3 /* AppReducer.swift */; };
+		F1152EA52CAC01B1006867C3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152EA42CAC01B1006867C3 /* AppState.swift */; };
+		F1152EA82CAC0571006867C3 /* conversationMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152EA72CAC0571006867C3 /* conversationMiddleware.swift */; };
+		F1152EAB2CAC09DA006867C3 /* AnonymousStoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152EAA2CAC09DA006867C3 /* AnonymousStoreSubscriber.swift */; };
+		F1152EAD2CAC2289006867C3 /* MyCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152EAC2CAC2289006867C3 /* MyCameraView.swift */; };
+		F1152EAF2CAC2C6D006867C3 /* EqualizerWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152EAE2CAC2C6D006867C3 /* EqualizerWaveView.swift */; };
+		F119669C2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = F119669B2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift */; };
+		F119669E2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F119669D2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift */; };
+		F11966A12C9B317700790EAB /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11966A02C9B317700790EAB /* AnalysisViewController.swift */; };
+		F11966A32C9C44B200790EAB /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11966A22C9C44B200790EAB /* SpeechRecognitionService.swift */; };
+		F15A0FB92CAADFDB00E61674 /* ChatGptAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A0FB82CAADFDB00E61674 /* ChatGptAPI.swift */; };
+		F1DDDAAD2C99C32D00C7F7A3 /* Talkify in Frameworks */ = {isa = PBXBuildFile; productRef = F1DDDAAC2C99C32D00C7F7A3 /* Talkify */; };
+		F1DDDAB12C99DECD00C7F7A3 /* AIKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAB02C99DECD00C7F7A3 /* AIKitService.swift */; };
+		F1DDDAB82C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAB72C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift */; };
+		F1DDDABA2C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAB92C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift */; };
+		F1DDDABE2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDABC2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.swift */; };
+		F1DDDABF2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1DDDABD2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.xib */; };
+		F1DDDAC12C99E98B00C7F7A3 /* QuestionsAndAnswersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAC02C99E98B00C7F7A3 /* QuestionsAndAnswersService.swift */; };
+		F1DDDAC42C99EA9700C7F7A3 /* EditQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAC32C99EA9700C7F7A3 /* EditQuestionViewController.swift */; };
+		F1DDDAC62C9A067A00C7F7A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAC52C9A067A00C7F7A3 /* SceneDelegate.swift */; };
+		F1F352602C917B5900731CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3525F2C917B5900731CF7 /* AppDelegate.swift */; };
+		F1F352642C917B5900731CF7 /* InterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F352632C917B5900731CF7 /* InterviewViewController.swift */; };
+		F1F352672C917B5900731CF7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F1F352662C917B5900731CF7 /* Base */; };
+		F1F352692C917B5900731CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F352682C917B5900731CF7 /* Assets.xcassets */; };
+		F1F3526C2C917B5900731CF7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F1F3526B2C917B5900731CF7 /* Base */; };
+		F1F352752C917B6A00731CF7 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F1F352742C917B6A00731CF7 /* OpenAIKit */; };
+		F1F352772C91A35500731CF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F352762C91A35500731CF7 /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F1152E912CAB3CB8006867C3 /* CircleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnimationView.swift; sourceTree = "<group>"; };
+		F1152E932CAB3CE7006867C3 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		F1152E9A2CAC0106006867C3 /* ChatGPTState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTState.swift; sourceTree = "<group>"; };
+		F1152E9D2CAC0150006867C3 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		F1152EA02CAC0179006867C3 /* ChatGPTReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTReducer.swift; sourceTree = "<group>"; };
+		F1152EA22CAC019A006867C3 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		F1152EA42CAC01B1006867C3 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		F1152EA72CAC0571006867C3 /* conversationMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conversationMiddleware.swift; sourceTree = "<group>"; };
+		F1152EAA2CAC09DA006867C3 /* AnonymousStoreSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousStoreSubscriber.swift; sourceTree = "<group>"; };
+		F1152EAC2CAC2289006867C3 /* MyCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCameraView.swift; sourceTree = "<group>"; };
+		F1152EAE2CAC2C6D006867C3 /* EqualizerWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizerWaveView.swift; sourceTree = "<group>"; };
+		F119669B2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterviewViewController+TextToSpeech.swift"; sourceTree = "<group>"; };
+		F119669D2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterviewViewController+SpeechToText.swift"; sourceTree = "<group>"; };
+		F11966A02C9B317700790EAB /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
+		F11966A22C9C44B200790EAB /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
+		F15A0FB82CAADFDB00E61674 /* ChatGptAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptAPI.swift; sourceTree = "<group>"; };
+		F1DDDAB02C99DECD00C7F7A3 /* AIKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIKitService.swift; sourceTree = "<group>"; };
+		F1DDDAB72C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedQuestionsViewController.swift; sourceTree = "<group>"; };
+		F1DDDAB92C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDescriptionUploadViewController.swift; sourceTree = "<group>"; };
+		F1DDDABC2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewQuestionTableViewCell.swift; sourceTree = "<group>"; };
+		F1DDDABD2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterviewQuestionTableViewCell.xib; sourceTree = "<group>"; };
+		F1DDDAC02C99E98B00C7F7A3 /* QuestionsAndAnswersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAndAnswersService.swift; sourceTree = "<group>"; };
+		F1DDDAC32C99EA9700C7F7A3 /* EditQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionViewController.swift; sourceTree = "<group>"; };
+		F1DDDAC52C9A067A00C7F7A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F1F3525C2C917B5900731CF7 /* StealthAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StealthAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F3525F2C917B5900731CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1F352632C917B5900731CF7 /* InterviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewViewController.swift; sourceTree = "<group>"; };
+		F1F352662C917B5900731CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1F352682C917B5900731CF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1F3526B2C917B5900731CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1F3526D2C917B5900731CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1F352762C91A35500731CF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1F352592C917B5900731CF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1152E972CAC00CD006867C3 /* ReSwift in Frameworks */,
+				F1F352752C917B6A00731CF7 /* OpenAIKit in Frameworks */,
+				F1DDDAAD2C99C32D00C7F7A3 /* Talkify in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F1152E8F2CAB3C94006867C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1152E912CAB3CB8006867C3 /* CircleAnimationView.swift */,
+				F1152EAC2CAC2289006867C3 /* MyCameraView.swift */,
+				F1152EAE2CAC2C6D006867C3 /* EqualizerWaveView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F1152E982CAC00D7006867C3 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				F1152EA92CAC09C8006867C3 /* AnonymousStoreSubscriber */,
+				F1152EA62CAC0563006867C3 /* Middleware */,
+				F1152E9F2CAC0168006867C3 /* Reducers */,
+				F1152E9C2CAC013D006867C3 /* Actions */,
+				F1152E992CAC00F4006867C3 /* State */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		F1152E992CAC00F4006867C3 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				F1152E9A2CAC0106006867C3 /* ChatGPTState.swift */,
+				F1152EA42CAC01B1006867C3 /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		F1152E9C2CAC013D006867C3 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				F1152E9D2CAC0150006867C3 /* Actions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		F1152E9F2CAC0168006867C3 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				F1152EA02CAC0179006867C3 /* ChatGPTReducer.swift */,
+				F1152EA22CAC019A006867C3 /* AppReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		F1152EA62CAC0563006867C3 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				F1152EA72CAC0571006867C3 /* conversationMiddleware.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
+		F1152EA92CAC09C8006867C3 /* AnonymousStoreSubscriber */ = {
+			isa = PBXGroup;
+			children = (
+				F1152EAA2CAC09DA006867C3 /* AnonymousStoreSubscriber.swift */,
+			);
+			path = AnonymousStoreSubscriber;
+			sourceTree = "<group>";
+		};
+		F119669A2C9B0AE000790EAB /* Interview */ = {
+			isa = PBXGroup;
+			children = (
+				F1F352632C917B5900731CF7 /* InterviewViewController.swift */,
+				F119669D2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift */,
+				F119669B2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift */,
+			);
+			path = Interview;
+			sourceTree = "<group>";
+		};
+		F119669F2C9B316400790EAB /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				F11966A02C9B317700790EAB /* AnalysisViewController.swift */,
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
+		F1DDDAB22C99E75E00C7F7A3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1152E932CAB3CE7006867C3 /* HomePageViewController.swift */,
+				F1DDDAB32C99E76600C7F7A3 /* JD Upload */,
+				F1DDDAB42C99E77300C7F7A3 /* Generated Questions */,
+				F1DDDAC22C99EA7C00C7F7A3 /* Edit Question */,
+				F119669A2C9B0AE000790EAB /* Interview */,
+				F119669F2C9B316400790EAB /* Analysis */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F1DDDAB32C99E76600C7F7A3 /* JD Upload */ = {
+			isa = PBXGroup;
+			children = (
+				F1DDDAB92C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift */,
+			);
+			path = "JD Upload";
+			sourceTree = "<group>";
+		};
+		F1DDDAB42C99E77300C7F7A3 /* Generated Questions */ = {
+			isa = PBXGroup;
+			children = (
+				F1DDDAB72C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift */,
+				F1DDDABB2C99E7EF00C7F7A3 /* TableViewCells */,
+			);
+			path = "Generated Questions";
+			sourceTree = "<group>";
+		};
+		F1DDDAB52C99E78700C7F7A3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F1DDDAB02C99DECD00C7F7A3 /* AIKitService.swift */,
+				F1DDDAC02C99E98B00C7F7A3 /* QuestionsAndAnswersService.swift */,
+				F11966A22C9C44B200790EAB /* SpeechRecognitionService.swift */,
+				F15A0FB82CAADFDB00E61674 /* ChatGptAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F1DDDABB2C99E7EF00C7F7A3 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F1DDDABC2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.swift */,
+				F1DDDABD2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		F1DDDAC22C99EA7C00C7F7A3 /* Edit Question */ = {
+			isa = PBXGroup;
+			children = (
+				F1DDDAC32C99EA9700C7F7A3 /* EditQuestionViewController.swift */,
+			);
+			path = "Edit Question";
+			sourceTree = "<group>";
+		};
+		F1F352532C917B5900731CF7 = {
+			isa = PBXGroup;
+			children = (
+				F1F3525E2C917B5900731CF7 /* Stealth */,
+				F1F3525D2C917B5900731CF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F1F3525D2C917B5900731CF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1F3525C2C917B5900731CF7 /* StealthAI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1F3525E2C917B5900731CF7 /* Stealth */ = {
+			isa = PBXGroup;
+			children = (
+				F1F352652C917B5900731CF7 /* Main.storyboard */,
+				F1F3526D2C917B5900731CF7 /* Info.plist */,
+				F1F3525F2C917B5900731CF7 /* AppDelegate.swift */,
+				F1DDDAC52C9A067A00C7F7A3 /* SceneDelegate.swift */,
+				F1F352682C917B5900731CF7 /* Assets.xcassets */,
+				F1F3526A2C917B5900731CF7 /* LaunchScreen.storyboard */,
+				F1F352762C91A35500731CF7 /* Constants.swift */,
+				F1152E982CAC00D7006867C3 /* Store */,
+				F1DDDAB52C99E78700C7F7A3 /* Services */,
+				F1152E8F2CAB3C94006867C3 /* Views */,
+				F1DDDAB22C99E75E00C7F7A3 /* View Controllers */,
+			);
+			path = Stealth;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1F3525B2C917B5900731CF7 /* StealthAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1F352702C917B5900731CF7 /* Build configuration list for PBXNativeTarget "StealthAI" */;
+			buildPhases = (
+				F1F352582C917B5900731CF7 /* Sources */,
+				F1F352592C917B5900731CF7 /* Frameworks */,
+				F1F3525A2C917B5900731CF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StealthAI;
+			packageProductDependencies = (
+				F1F352742C917B6A00731CF7 /* OpenAIKit */,
+				F1DDDAAC2C99C32D00C7F7A3 /* Talkify */,
+				F1152E962CAC00CD006867C3 /* ReSwift */,
+			);
+			productName = Stealth;
+			productReference = F1F3525C2C917B5900731CF7 /* StealthAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1F352542C917B5900731CF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					F1F3525B2C917B5900731CF7 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = F1F352572C917B5900731CF7 /* Build configuration list for PBXProject "StealthAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1F352532C917B5900731CF7;
+			packageReferences = (
+				F1F352732C917B6A00731CF7 /* XCRemoteSwiftPackageReference "OpenAIKit" */,
+				F1DDDAAB2C99C32D00C7F7A3 /* XCRemoteSwiftPackageReference "Talkify" */,
+				F1152E952CAC00CD006867C3 /* XCRemoteSwiftPackageReference "ReSwift" */,
+			);
+			productRefGroup = F1F3525D2C917B5900731CF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1F3525B2C917B5900731CF7 /* StealthAI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1F3525A2C917B5900731CF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F352692C917B5900731CF7 /* Assets.xcassets in Resources */,
+				F1F3526C2C917B5900731CF7 /* Base in Resources */,
+				F1F352672C917B5900731CF7 /* Base in Resources */,
+				F1DDDABF2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1F352582C917B5900731CF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DDDAC42C99EA9700C7F7A3 /* EditQuestionViewController.swift in Sources */,
+				F1152EAD2CAC2289006867C3 /* MyCameraView.swift in Sources */,
+				F1152E922CAB3CB8006867C3 /* CircleAnimationView.swift in Sources */,
+				F1F352642C917B5900731CF7 /* InterviewViewController.swift in Sources */,
+				F1152EAB2CAC09DA006867C3 /* AnonymousStoreSubscriber.swift in Sources */,
+				F1152E942CAB3CE7006867C3 /* HomePageViewController.swift in Sources */,
+				F1152EAF2CAC2C6D006867C3 /* EqualizerWaveView.swift in Sources */,
+				F1152EA12CAC0179006867C3 /* ChatGPTReducer.swift in Sources */,
+				F119669C2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift in Sources */,
+				F15A0FB92CAADFDB00E61674 /* ChatGptAPI.swift in Sources */,
+				F1DDDAB12C99DECD00C7F7A3 /* AIKitService.swift in Sources */,
+				F1152E9E2CAC0150006867C3 /* Actions.swift in Sources */,
+				F1152EA32CAC019A006867C3 /* AppReducer.swift in Sources */,
+				F1DDDAC12C99E98B00C7F7A3 /* QuestionsAndAnswersService.swift in Sources */,
+				F1DDDAB82C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift in Sources */,
+				F1152E9B2CAC0106006867C3 /* ChatGPTState.swift in Sources */,
+				F1DDDAC62C9A067A00C7F7A3 /* SceneDelegate.swift in Sources */,
+				F11966A12C9B317700790EAB /* AnalysisViewController.swift in Sources */,
+				F1F352602C917B5900731CF7 /* AppDelegate.swift in Sources */,
+				F1152EA82CAC0571006867C3 /* conversationMiddleware.swift in Sources */,
+				F11966A32C9C44B200790EAB /* SpeechRecognitionService.swift in Sources */,
+				F1152EA52CAC01B1006867C3 /* AppState.swift in Sources */,
+				F119669E2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift in Sources */,
+				F1F352772C91A35500731CF7 /* Constants.swift in Sources */,
+				F1DDDABA2C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift in Sources */,
+				F1DDDABE2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F1F352652C917B5900731CF7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1F352662C917B5900731CF7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F1F3526A2C917B5900731CF7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1F3526B2C917B5900731CF7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1F3526E2C917B5900731CF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F1F3526F2C917B5900731CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1F352712C917B5900731CF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7M86T7GAGU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stealth/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to the microphone to record your voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We need access to speech recognition to convert your voice into text.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stebra.stealth.StealthAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1F352722C917B5900731CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7M86T7GAGU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stealth/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to the microphone to record your voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We need access to speech recognition to convert your voice into text.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stebra.stealth.StealthAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1F352572C917B5900731CF7 /* Build configuration list for PBXProject "StealthAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1F3526E2C917B5900731CF7 /* Debug */,
+				F1F3526F2C917B5900731CF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1F352702C917B5900731CF7 /* Build configuration list for PBXNativeTarget "StealthAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1F352712C917B5900731CF7 /* Debug */,
+				F1F352722C917B5900731CF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1152E952CAC00CD006867C3 /* XCRemoteSwiftPackageReference "ReSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReSwift/ReSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.1;
+			};
+		};
+		F1DDDAAB2C99C32D00C7F7A3 /* XCRemoteSwiftPackageReference "Talkify" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tornikegomareli/Talkify.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+		F1F352732C917B6A00731CF7 /* XCRemoteSwiftPackageReference "OpenAIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OpenDive/OpenAIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1152E962CAC00CD006867C3 /* ReSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1152E952CAC00CD006867C3 /* XCRemoteSwiftPackageReference "ReSwift" */;
+			productName = ReSwift;
+		};
+		F1DDDAAC2C99C32D00C7F7A3 /* Talkify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1DDDAAB2C99C32D00C7F7A3 /* XCRemoteSwiftPackageReference "Talkify" */;
+			productName = Talkify;
+		};
+		F1F352742C917B6A00731CF7 /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1F352732C917B6A00731CF7 /* XCRemoteSwiftPackageReference "OpenAIKit" */;
+			productName = OpenAIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F1F352542C917B5900731CF7 /* Project object */;
+}

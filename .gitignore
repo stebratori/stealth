@@ -1,0 +1,23 @@
+# Xcode
+DerivedData/
+*.xcworkspace
+*.xcuserdata
+*.xccheckout
+*.xcscmblueprint
+build/
+
+# macOS
+.DS_Store
+
+# Sensitive Information
+Stealth/Constants.swift
+# Xcode
+DerivedData/
+*.xcworkspace
+*.xcuserdata
+*.xccheckout
+*.xcscmblueprint
+build/
+
+# macOS
+.DS_Store
