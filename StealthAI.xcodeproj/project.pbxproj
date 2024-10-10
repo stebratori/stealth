@@ -25,12 +25,10 @@
 		F11966A32C9C44B200790EAB /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11966A22C9C44B200790EAB /* SpeechRecognitionService.swift */; };
 		F15A0FB92CAADFDB00E61674 /* ChatGptAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A0FB82CAADFDB00E61674 /* ChatGptAPI.swift */; };
 		F1DDDAAD2C99C32D00C7F7A3 /* Talkify in Frameworks */ = {isa = PBXBuildFile; productRef = F1DDDAAC2C99C32D00C7F7A3 /* Talkify */; };
-		F1DDDAB12C99DECD00C7F7A3 /* AIKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAB02C99DECD00C7F7A3 /* AIKitService.swift */; };
 		F1DDDAB82C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAB72C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift */; };
 		F1DDDABA2C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAB92C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift */; };
 		F1DDDABE2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDABC2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.swift */; };
 		F1DDDABF2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1DDDABD2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.xib */; };
-		F1DDDAC12C99E98B00C7F7A3 /* QuestionsAndAnswersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAC02C99E98B00C7F7A3 /* QuestionsAndAnswersService.swift */; };
 		F1DDDAC42C99EA9700C7F7A3 /* EditQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAC32C99EA9700C7F7A3 /* EditQuestionViewController.swift */; };
 		F1DDDAC62C9A067A00C7F7A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAC52C9A067A00C7F7A3 /* SceneDelegate.swift */; };
 		F1F352602C917B5900731CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3525F2C917B5900731CF7 /* AppDelegate.swift */; };
@@ -59,12 +57,10 @@
 		F11966A02C9B317700790EAB /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		F11966A22C9C44B200790EAB /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		F15A0FB82CAADFDB00E61674 /* ChatGptAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptAPI.swift; sourceTree = "<group>"; };
-		F1DDDAB02C99DECD00C7F7A3 /* AIKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIKitService.swift; sourceTree = "<group>"; };
 		F1DDDAB72C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedQuestionsViewController.swift; sourceTree = "<group>"; };
 		F1DDDAB92C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDescriptionUploadViewController.swift; sourceTree = "<group>"; };
 		F1DDDABC2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		F1DDDABD2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterviewQuestionTableViewCell.xib; sourceTree = "<group>"; };
-		F1DDDAC02C99E98B00C7F7A3 /* QuestionsAndAnswersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAndAnswersService.swift; sourceTree = "<group>"; };
 		F1DDDAC32C99EA9700C7F7A3 /* EditQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionViewController.swift; sourceTree = "<group>"; };
 		F1DDDAC52C9A067A00C7F7A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F1F3525C2C917B5900731CF7 /* StealthAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StealthAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,8 +202,6 @@
 		F1DDDAB52C99E78700C7F7A3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F1DDDAB02C99DECD00C7F7A3 /* AIKitService.swift */,
-				F1DDDAC02C99E98B00C7F7A3 /* QuestionsAndAnswersService.swift */,
 				F11966A22C9C44B200790EAB /* SpeechRecognitionService.swift */,
 				F15A0FB82CAADFDB00E61674 /* ChatGptAPI.swift */,
 			);
@@ -357,10 +351,8 @@
 				F1152EA12CAC0179006867C3 /* ChatGPTReducer.swift in Sources */,
 				F119669C2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift in Sources */,
 				F15A0FB92CAADFDB00E61674 /* ChatGptAPI.swift in Sources */,
-				F1DDDAB12C99DECD00C7F7A3 /* AIKitService.swift in Sources */,
 				F1152E9E2CAC0150006867C3 /* Actions.swift in Sources */,
 				F1152EA32CAC019A006867C3 /* AppReducer.swift in Sources */,
-				F1DDDAC12C99E98B00C7F7A3 /* QuestionsAndAnswersService.swift in Sources */,
 				F1DDDAB82C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift in Sources */,
 				F1152E9B2CAC0106006867C3 /* ChatGPTState.swift in Sources */,
 				F1DDDAC62C9A067A00C7F7A3 /* SceneDelegate.swift in Sources */,

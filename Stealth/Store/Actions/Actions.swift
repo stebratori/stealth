@@ -20,7 +20,7 @@ struct UpdateAudioTextAction: Action {
 
 // Action to update the conversation
 struct UpdateConversationAction: Action {
-    let conversation: [String]
+    let conversation: [(role: String, content: String)]
 }
 
 // Action to send user's STT as a prompt to ChatGPT
@@ -28,3 +28,7 @@ struct SendUserTextAction: Action {
     let text: String
 }
 
+// Action to update the Interview Questions
+struct UpdateInterviewQuestionsAction: Action {
+    let questions: [String]
+}

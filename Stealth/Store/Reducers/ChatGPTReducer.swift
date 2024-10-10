@@ -18,6 +18,8 @@ func chatGPTReducer(action: Action, state: ChatGPTState?) -> ChatGPTState {
         state.audioText = action.audioText
     case let action as UpdateConversationAction:
         state.conversation = action.conversation
+    case let action as UpdateInterviewQuestionsAction:
+        state.interviewQuestions = action.questions
     default:
         break
     }

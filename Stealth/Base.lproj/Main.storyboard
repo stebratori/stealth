@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paste a Job Description in the prompt field below to generate interview questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqg-j6-zAS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paste a Job Description in the text field below to generate interview questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqg-j6-zAS">
                                 <rect key="frame" x="20" y="69" width="353" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="2oU-66-gfs"/>
@@ -43,7 +43,7 @@
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AXj-5E-ddo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="mid level swift dev" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AXj-5E-ddo">
                                 <rect key="frame" x="20" y="159" width="353" height="589"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Start the Interview">
+                                <state key="normal" title="Generate">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -96,7 +96,7 @@
                         <outlet property="btnGenerate" destination="ZXZ-Iz-vm4" id="hua-AL-YZK"/>
                         <outlet property="loader" destination="yEo-pf-tgX" id="QH0-zt-BWT"/>
                         <outlet property="textView" destination="AXj-5E-ddo" id="zbA-bJ-YGP"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="startTheInterview" id="K9i-Sp-XHg"/>
+                        <segue destination="Osf-sx-ANo" kind="show" identifier="segueToGeneratedQuestions" id="dQh-70-lMc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eI6-ch-OOl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -167,7 +167,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcK-lE-5rl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Oa1-57-oip" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="239" y="765"/>
+            <point key="canvasLocation" x="1485" y="778"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iKb-oe-2xO">
@@ -247,7 +247,7 @@ You can tap on a question you wish to edit.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19M-1h-ZtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1505" y="-1004"/>
+            <point key="canvasLocation" x="1485" y="5"/>
         </scene>
         <!--Interview View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -351,7 +351,7 @@ You can tap on a question you wish to edit.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1394.6564885496182" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="2731" y="5"/>
         </scene>
         <!--Analysis View Controller-->
         <scene sceneID="POR-Vr-WpS">
@@ -458,12 +458,9 @@ You can tap on a question you wish to edit.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPo-QP-dlc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2547.3282442748091" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="3798" y="5"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="K9i-Sp-XHg"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

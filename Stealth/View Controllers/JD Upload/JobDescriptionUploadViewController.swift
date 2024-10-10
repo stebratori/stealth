@@ -24,11 +24,10 @@ class JobDescriptionUploadViewController: UIViewController, UITextViewDelegate, 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        textView.text = ""
+        //textView.text = ""
         btnGenerate.isEnabled = true
         loader.isHidden = true
         btnGenerate.setTitle("Generate", for: .normal)
-        textView.text = Constants.Prompt.startingPrompt
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,11 +36,22 @@ class JobDescriptionUploadViewController: UIViewController, UITextViewDelegate, 
     }
     
     @IBAction func generateInterviewQuestions(_ sender: UIButton) {
+        loader.isHidden = false
         let jd: String = textView.text
         btnGenerate.isEnabled = false
-        loader.isHidden = false
-        store.dispatch(UpdateConversationAction(conversation: [textView.text]))
-        performSegue(withIdentifier: "startTheInterview", sender: self)
+        let message: String = Constants.Prompt.startingPrompt + jd
+        ChatGptAPI.shared.obtainInitialQuestions(message) { result in
+            switch result {
+            case .success(let questions):
+                // Handle the obtained list of questions
+                print("Questions: \(questions)")
+                store.dispatch(UpdateInterviewQuestionsAction(questions: questions))
+                self.questionsGenerated()
+            case .failure(let error):
+                // Handle the error
+                print("generateInterviewQuestions Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     @objc

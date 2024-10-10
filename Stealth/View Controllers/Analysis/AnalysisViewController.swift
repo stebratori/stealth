@@ -18,9 +18,9 @@ class AnalysisViewController: UIViewController {
                                                selector: #selector(analysisComplete),
                                                name: Notification.Name(Constants.NotificationName.analysisDone),
                                                object: nil)
-        Task {
-            await AIKitService.shared.createAnalysis()
-        }
+//        Task {
+//            await AIKitService.shared.createAnalysis()
+//        }
     }
     
     @IBAction func generateNewJD(_ sender: UIButton) {
@@ -33,12 +33,12 @@ class AnalysisViewController: UIViewController {
     
     @objc
     func analysisComplete() {
-        if let analysis = QuestionsAndAnswersService.current.analysis {
-            DispatchQueue.main.async {
-                self.textView.text = analysis
-                self.lblTotalTokensSpent.text = "Total tokens spent: \(AIKitService.shared.tokens) \n(Price for .gpt4 is $0.03-$0.06/1000tokens)"
-            }
-        }
+//        if let analysis = QuestionsAndAnswersService.current.analysis {
+//            DispatchQueue.main.async {
+//                self.textView.text = analysis
+//                self.lblTotalTokensSpent.text = "Total tokens spent: \(AIKitService.shared.tokens) \n(Price for .gpt4 is $0.03-$0.06/1000tokens)"
+//            }
+//        }
     }
 
     private func speak(text: String, withDelay delay: Double?) {

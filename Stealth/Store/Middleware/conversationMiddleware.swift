@@ -12,20 +12,20 @@ import ReSwift
 let conversationMiddleware: Middleware<AppState> = { dispatch, getState in
     return { next in
         return { action in
-            // Perform logic based on specific actions
             if let action = action as? UpdateAudioTextAction {
-                // Add the audio text to the conversation
+                // Add the audio text to the conversation as a dictionary with role and content
                 var conversation = getState()?.chatGPTState.conversation ?? []
-                conversation.append("ChatGPT: \(action.audioText)")
+                let newMessage: (role: String, content: String) = (role: "assistant", content: action.audioText)
+                conversation.append(newMessage)
                 
                 // Dispatch an action to update the conversation
                 dispatch(UpdateConversationAction(conversation: conversation))
             }
-            
             if let action = action as? SendUserTextAction {
-                // Add the user's text to the conversation
+            // Add the user's text to the conversation as a dictionary with role and content
                 var conversation = getState()?.chatGPTState.conversation ?? []
-                conversation.append("User: \(action.text)")
+                let newMessage: (role: String, content: String) = (role: "user", content: action.text)
+                conversation.append(newMessage)
                 
                 // Dispatch an action to update the conversation
                 dispatch(UpdateConversationAction(conversation: conversation))

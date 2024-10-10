@@ -29,9 +29,9 @@ class EditQuestionViewController: UIViewController {
     }
 
     @IBAction func doneAction(_ sender: UIButton) {
-        if textView.text != initialQuestion {
-            QuestionsAndAnswersService.current.questions[index] = textView.text
-        }
+//        if textView.text != initialQuestion {
+//            QuestionsAndAnswersService.current.questions[index] = textView.text
+//        }
         performSegue(withIdentifier: "unwindToGeneratedQuestions", sender: self)
     }
     

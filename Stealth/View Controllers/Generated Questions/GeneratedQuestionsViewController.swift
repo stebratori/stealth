@@ -37,20 +37,20 @@ extension GeneratedQuestionsViewController: UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        QuestionsAndAnswersService.current.questions.count
+        store.state.chatGPTState.interviewQuestions.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let editQuestionsVC = storyboard.instantiateViewController(withIdentifier: "EditQuestionViewController") as? EditQuestionViewController else { return }
-        let question = QuestionsAndAnswersService.current.questions[indexPath.row]
+        let question = store.state.chatGPTState.interviewQuestions[indexPath.row]
         editQuestionsVC.setupView(question: question, index: indexPath.row)
         navigationController?.pushViewController(editQuestionsVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InterviewQuestionTableViewCell", for: indexPath) as! InterviewQuestionTableViewCell
-        let question = QuestionsAndAnswersService.current.questions[indexPath.row]
+        let question = store.state.chatGPTState.interviewQuestions[indexPath.row]
         cell.setupCell(text: question)
         return cell
     }

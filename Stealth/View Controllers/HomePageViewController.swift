@@ -40,7 +40,7 @@ class HomePageViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         cameraView.startVideoStream()
-        ChatGptAPI.sendMessageAndPlayVoice("Can you please welcome the user to the Stealth mobile application. Ask them if you can help them to generate the Job Description for the role they have in their company.")
+        //ChatGptAPI.sendMessageAndPlayVoice("Can you please welcome the user to the Stealth mobile application. Ask them if you can help them to generate the Job Description for the role they have in their company.")
     }
     
     // Stop the video stream when the view disappears

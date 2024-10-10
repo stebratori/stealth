@@ -4,7 +4,6 @@
 //
 //  Created by Stefan Brankovic on 9/19/24.
 //
-
 import Foundation
 import AVFoundation
 import Speech
@@ -33,21 +32,6 @@ final class SpeechRecognitionService: NSObject, SpeechRecognitionServiceLogic, S
         super.init()
         speechRecognizer?.delegate = self
     }
-    
-//    func start() {
-//        SFSpeechRecognizer.requestAuthorization { [weak self] (authStatus) in
-//            guard authStatus == .authorized else {
-//                // Handle authorization error
-//                return
-//            }
-//            
-//            do {
-//                try self?.startRecording()
-//            } catch {
-//                // Handle error
-//            }
-//        }
-//    }
     
     // Request authorization and start recording
     func start() {
@@ -78,7 +62,8 @@ final class SpeechRecognitionService: NSObject, SpeechRecognitionServiceLogic, S
         delegate?.didFailWithError(error)
     }
     
-    func startRecording() throws {
+    // Start recording and setting up the audio engine and recognition task
+    private func startRecording() throws {
         
         // Cancel any ongoing recognition task
         if let recognitionTask = recognitionTask {
@@ -88,37 +73,49 @@ final class SpeechRecognitionService: NSObject, SpeechRecognitionServiceLogic, S
         
         // Set up the audio session
         let audioSession = AVAudioSession.sharedInstance()
-        try audioSession.setCategory(.playAndRecord, mode: .default, options: .mixWithOthers)
+        try audioSession.setCategory(.record, mode: .default, options: .mixWithOthers)
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         
         // Create recognition request
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-        
-        // Check if audio input is available
-        
-        let inputNode = audioEngine.inputNode
-        
-        // Assign the recognition request to the input node's output
-        let recordingFormat = inputNode.inputFormat(forBus: 0)
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, time) in
-            self.recognitionRequest?.append(buffer)
-            self.delegate?.processAudioBuffer(buffer)
+        guard let recognitionRequest = recognitionRequest else {
+            throw NSError(domain: "SpeechRecognitionService", code: -1, userInfo: [NSLocalizedDescriptionKey: "Unable to create recognition request."])
         }
         
-        // Prepare the audio engine and start recording
+        recognitionRequest.shouldReportPartialResults = true
+        
+        // Set up input node
+        let inputNode = audioEngine.inputNode
+        let recordingFormat = inputNode.outputFormat(forBus: 0)
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { [weak self] buffer, _ in
+            recognitionRequest.append(buffer)
+            self?.delegate?.processAudioBuffer(buffer)
+        }
+        
+        // Prepare and start audio engine
         audioEngine.prepare()
         try audioEngine.start()
         
         // Start speech recognition task
-        recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest!) { [weak self] (result, error) in
+        recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest) { [weak self] result, error in
+            if let error = error {
+                self?.delegate?.didFailWithError(error)
+                self?.stop() // Stop recognition on failure
+                return
+            }
+            
             if let result = result {
                 let transcribedText = result.bestTranscription.formattedString
-                // Process the transcribed text and extract the required parameters
                 self?.delegate?.didReceiveTranscribedText(transcribedText)
+            }
+            
+            if result?.isFinal == true {
+                self?.stop() // Stop recognition if the result is final
             }
         }
     }
     
+    // Stop recording and clean up
     func stop() {
         audioEngine.stop()
         audioEngine.inputNode.removeTap(onBus: 0)
@@ -126,6 +123,16 @@ final class SpeechRecognitionService: NSObject, SpeechRecognitionServiceLogic, S
         recognitionTask?.cancel()
         recognitionRequest = nil
         recognitionTask = nil
+        deactivateAudioSession()
         delegate?.didStopRecording()
+    }
+    
+    // Deactivate the audio session after stopping the recognition
+    private func deactivateAudioSession() {
+        do {
+            try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+        } catch {
+            delegate?.didFailWithError(error)
+        }
     }
 }
