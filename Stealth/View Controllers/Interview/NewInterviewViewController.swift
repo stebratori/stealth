@@ -13,8 +13,8 @@ class NewInterviewViewController: UIViewController {
     private var loader: UIView?
     private var interviewStarted: Bool = false
     @IBOutlet weak var btnRecordSpeech: UIButton!
-    @IBOutlet weak var lblAssistant: UILabel!
-    @IBOutlet weak var lblUser: UILabel!
+    @IBOutlet weak var txtAssistant: UITextView!
+    @IBOutlet weak var txtUser: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,19 +54,18 @@ extension NewInterviewViewController: ConversationManagerDelegate {
         if !interviewStarted {
             interviewStarted = true
             hidePopup()
-            showPopup(title: "Test Popup", message: "Test popup Message")
         }
     }
     
     func assistantReplyReceived(text: String) {
         DispatchQueue.main.async {
-            self.lblAssistant.text = text
+            self.txtAssistant.text = text
         }
     }
     
     func didReceiveTranscribedText(text: String) {
         DispatchQueue.main.async {
-            self.lblUser.text = text
+            self.txtUser.text = text
         }
     }
     

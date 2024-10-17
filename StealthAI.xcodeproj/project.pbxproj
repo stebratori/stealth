@@ -20,10 +20,11 @@
 		F1152EAB2CAC09DA006867C3 /* AnonymousStoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152EAA2CAC09DA006867C3 /* AnonymousStoreSubscriber.swift */; };
 		F1152EAD2CAC2289006867C3 /* MyCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152EAC2CAC2289006867C3 /* MyCameraView.swift */; };
 		F1152EAF2CAC2C6D006867C3 /* EqualizerWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152EAE2CAC2C6D006867C3 /* EqualizerWaveView.swift */; };
-		F119669C2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = F119669B2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift */; };
-		F119669E2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F119669D2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift */; };
 		F11966A12C9B317700790EAB /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11966A02C9B317700790EAB /* AnalysisViewController.swift */; };
 		F11966A32C9C44B200790EAB /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11966A22C9C44B200790EAB /* SpeechRecognitionService.swift */; };
+		F144FE1D2CC192D80037E33D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F144FE1C2CC192D80037E33D /* GoogleService-Info.plist */; };
+		F144FE272CC1981D0037E33D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F144FE262CC1981D0037E33D /* FirebaseAnalytics */; };
+		F144FE292CC1981D0037E33D /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = F144FE282CC1981D0037E33D /* FirebaseCrashlytics */; };
 		F14DFA612CBD581700E68D44 /* Extensions+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DFA602CBD581700E68D44 /* Extensions+String.swift */; };
 		F14DFA642CBD83A000E68D44 /* SystemPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DFA632CBD83A000E68D44 /* SystemPromptViewController.swift */; };
 		F15A0FB92CAADFDB00E61674 /* ChatGptAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A0FB82CAADFDB00E61674 /* ChatGptAPI.swift */; };
@@ -41,7 +42,6 @@
 		F1DDDAC42C99EA9700C7F7A3 /* EditQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAC32C99EA9700C7F7A3 /* EditQuestionViewController.swift */; };
 		F1DDDAC62C9A067A00C7F7A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAC52C9A067A00C7F7A3 /* SceneDelegate.swift */; };
 		F1F352602C917B5900731CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3525F2C917B5900731CF7 /* AppDelegate.swift */; };
-		F1F352642C917B5900731CF7 /* InterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F352632C917B5900731CF7 /* InterviewViewController.swift */; };
 		F1F352672C917B5900731CF7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F1F352662C917B5900731CF7 /* Base */; };
 		F1F352692C917B5900731CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F352682C917B5900731CF7 /* Assets.xcassets */; };
 		F1F3526C2C917B5900731CF7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F1F3526B2C917B5900731CF7 /* Base */; };
@@ -62,10 +62,9 @@
 		F1152EAA2CAC09DA006867C3 /* AnonymousStoreSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousStoreSubscriber.swift; sourceTree = "<group>"; };
 		F1152EAC2CAC2289006867C3 /* MyCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCameraView.swift; sourceTree = "<group>"; };
 		F1152EAE2CAC2C6D006867C3 /* EqualizerWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizerWaveView.swift; sourceTree = "<group>"; };
-		F119669B2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterviewViewController+TextToSpeech.swift"; sourceTree = "<group>"; };
-		F119669D2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterviewViewController+SpeechToText.swift"; sourceTree = "<group>"; };
 		F11966A02C9B317700790EAB /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		F11966A22C9C44B200790EAB /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
+		F144FE1C2CC192D80037E33D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F14DFA602CBD581700E68D44 /* Extensions+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+String.swift"; sourceTree = "<group>"; };
 		F14DFA632CBD83A000E68D44 /* SystemPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemPromptViewController.swift; sourceTree = "<group>"; };
 		F15A0FB82CAADFDB00E61674 /* ChatGptAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptAPI.swift; sourceTree = "<group>"; };
@@ -83,7 +82,6 @@
 		F1DDDAC52C9A067A00C7F7A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F1F3525C2C917B5900731CF7 /* StealthAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StealthAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F3525F2C917B5900731CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1F352632C917B5900731CF7 /* InterviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewViewController.swift; sourceTree = "<group>"; };
 		F1F352662C917B5900731CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1F352682C917B5900731CF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1F3526B2C917B5900731CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +96,8 @@
 			files = (
 				F1152E972CAC00CD006867C3 /* ReSwift in Frameworks */,
 				F1F352752C917B6A00731CF7 /* OpenAIKit in Frameworks */,
+				F144FE292CC1981D0037E33D /* FirebaseCrashlytics in Frameworks */,
+				F144FE272CC1981D0037E33D /* FirebaseAnalytics in Frameworks */,
 				F1DDDAAD2C99C32D00C7F7A3 /* Talkify in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,8 +172,8 @@
 		F119669A2C9B0AE000790EAB /* Interview */ = {
 			isa = PBXGroup;
 			children = (
-				F1C5E2082CB94E8200994133 /* Old */,
-				F1C5E2072CB94E7500994133 /* New */,
+				F1C5E2032CB94E7100994133 /* NewInterviewViewController.swift */,
+				F1C5E2042CB94E7100994133 /* NewInterviewViewController.xib */,
 			);
 			path = Interview;
 			sourceTree = "<group>";
@@ -201,25 +201,6 @@
 				F14DFA632CBD83A000E68D44 /* SystemPromptViewController.swift */,
 			);
 			path = "System Prompt";
-			sourceTree = "<group>";
-		};
-		F1C5E2072CB94E7500994133 /* New */ = {
-			isa = PBXGroup;
-			children = (
-				F1C5E2032CB94E7100994133 /* NewInterviewViewController.swift */,
-				F1C5E2042CB94E7100994133 /* NewInterviewViewController.xib */,
-			);
-			path = New;
-			sourceTree = "<group>";
-		};
-		F1C5E2082CB94E8200994133 /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				F1F352632C917B5900731CF7 /* InterviewViewController.swift */,
-				F119669D2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift */,
-				F119669B2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift */,
-			);
-			path = Old;
 			sourceTree = "<group>";
 		};
 		F1DDDAB22C99E75E00C7F7A3 /* View Controllers */ = {
@@ -304,6 +285,7 @@
 			children = (
 				F1F352652C917B5900731CF7 /* Main.storyboard */,
 				F1F3526D2C917B5900731CF7 /* Info.plist */,
+				F144FE1C2CC192D80037E33D /* GoogleService-Info.plist */,
 				F1F3525F2C917B5900731CF7 /* AppDelegate.swift */,
 				F1DDDAC52C9A067A00C7F7A3 /* SceneDelegate.swift */,
 				F1F352682C917B5900731CF7 /* Assets.xcassets */,
@@ -338,6 +320,8 @@
 				F1F352742C917B6A00731CF7 /* OpenAIKit */,
 				F1DDDAAC2C99C32D00C7F7A3 /* Talkify */,
 				F1152E962CAC00CD006867C3 /* ReSwift */,
+				F144FE262CC1981D0037E33D /* FirebaseAnalytics */,
+				F144FE282CC1981D0037E33D /* FirebaseCrashlytics */,
 			);
 			productName = Stealth;
 			productReference = F1F3525C2C917B5900731CF7 /* StealthAI.app */;
@@ -371,6 +355,7 @@
 				F1F352732C917B6A00731CF7 /* XCRemoteSwiftPackageReference "OpenAIKit" */,
 				F1DDDAAB2C99C32D00C7F7A3 /* XCRemoteSwiftPackageReference "Talkify" */,
 				F1152E952CAC00CD006867C3 /* XCRemoteSwiftPackageReference "ReSwift" */,
+				F144FE252CC1981D0037E33D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = F1F3525D2C917B5900731CF7 /* Products */;
 			projectDirPath = "";
@@ -391,6 +376,7 @@
 				F1F352672C917B5900731CF7 /* Base in Resources */,
 				F1DDDABF2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.xib in Resources */,
 				F1C5E2052CB94E7100994133 /* NewInterviewViewController.xib in Resources */,
+				F144FE1D2CC192D80037E33D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,12 +393,10 @@
 				F10E74E42CB8306B00FD3924 /* PromptManager.swift in Sources */,
 				F1152EAD2CAC2289006867C3 /* MyCameraView.swift in Sources */,
 				F1152E922CAB3CB8006867C3 /* CircleAnimationView.swift in Sources */,
-				F1F352642C917B5900731CF7 /* InterviewViewController.swift in Sources */,
 				F1152EAB2CAC09DA006867C3 /* AnonymousStoreSubscriber.swift in Sources */,
 				F14DFA642CBD83A000E68D44 /* SystemPromptViewController.swift in Sources */,
 				F1152EAF2CAC2C6D006867C3 /* EqualizerWaveView.swift in Sources */,
 				F1152EA12CAC0179006867C3 /* ChatGPTReducer.swift in Sources */,
-				F119669C2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift in Sources */,
 				F15A0FB92CAADFDB00E61674 /* ChatGptAPI.swift in Sources */,
 				F1C5E20A2CB9557F00994133 /* AudioPlayerService.swift in Sources */,
 				F16F97692CBFC45900E9C997 /* Extensions+UIViewController.swift in Sources */,
@@ -427,7 +411,6 @@
 				F11966A32C9C44B200790EAB /* SpeechRecognitionService.swift in Sources */,
 				F1152EA52CAC01B1006867C3 /* AppState.swift in Sources */,
 				F1C5E2062CB94E7100994133 /* NewInterviewViewController.swift in Sources */,
-				F119669E2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift in Sources */,
 				F14DFA612CBD581700E68D44 /* Extensions+String.swift in Sources */,
 				F1F352772C91A35500731CF7 /* Constants.swift in Sources */,
 				F1DDDABA2C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift in Sources */,
@@ -583,7 +566,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7M86T7GAGU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Stealth/Info.plist;
@@ -615,7 +598,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7M86T7GAGU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Stealth/Info.plist;
@@ -673,6 +656,14 @@
 				minimumVersion = 6.1.1;
 			};
 		};
+		F144FE252CC1981D0037E33D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
 		F1DDDAAB2C99C32D00C7F7A3 /* XCRemoteSwiftPackageReference "Talkify" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tornikegomareli/Talkify.git";
@@ -696,6 +687,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F1152E952CAC00CD006867C3 /* XCRemoteSwiftPackageReference "ReSwift" */;
 			productName = ReSwift;
+		};
+		F144FE262CC1981D0037E33D /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F144FE252CC1981D0037E33D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		F144FE282CC1981D0037E33D /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F144FE252CC1981D0037E33D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 		F1DDDAAC2C99C32D00C7F7A3 /* Talkify */ = {
 			isa = XCSwiftPackageProductDependency;

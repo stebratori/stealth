@@ -7,6 +7,7 @@
 
 import UIKit
 import ReSwift
+import Firebase
 
 var store: Store<AppState>!
 let logger: Logger = Logger()
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         store = Store(
             reducer: appReducer,
             state: nil,

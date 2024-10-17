@@ -9,7 +9,6 @@ import UIKit
 
 class AnalysisViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var lblTotalTokensSpent: UILabel!
     var analysisText: String = ""
     
     override func viewDidLoad() {
@@ -33,6 +32,5 @@ class AnalysisViewController: UIViewController {
         let promptTokensPrice = Double(promptTokens) * 0.03 / 1000
         let completionTokensPrice = Double(completionTokens) * 0.06 / 1000
         let total =  completionTokensPrice + promptTokensPrice
-        lblTotalTokensSpent.text = "promptTokens spent: \(promptTokens) ($0.03/1000) \ncompletionTokens spent: \(completionTokens) ($0.06/1000)\nTotal: $\(total)"
     }
 }

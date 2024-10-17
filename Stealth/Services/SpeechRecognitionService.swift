@@ -146,8 +146,10 @@ final class SpeechRecognitionService: NSObject, SFSpeechRecognizerDelegate {
         recognitionTask?.cancel()
         recognitionRequest = nil
         recognitionTask = nil
-        deactivateAudioSession()
-        delegate?.didStopRecording()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
+            self?.deactivateAudioSession()
+            self?.delegate?.didStopRecording()
+        }
     }
     
     
@@ -159,9 +161,9 @@ final class SpeechRecognitionService: NSObject, SFSpeechRecognizerDelegate {
     // Deactivate the audio session after stopping the recognition
     private func deactivateAudioSession() {
         do {
-            try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+            try AVAudioSession.sharedInstance().setActive(false, options: [])
         } catch {
-            delegate?.didFailWithError(error)
+            //delegate?.didFailWithError(error)
         }
     }
 }

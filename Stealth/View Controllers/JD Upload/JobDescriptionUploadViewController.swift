@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 class JobDescriptionUploadViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
 
@@ -23,7 +24,6 @@ class JobDescriptionUploadViewController: UIViewController, UITextViewDelegate, 
                                                name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
                                                name: UIResponder.keyboardWillHideNotification, object: nil)
-
     }
     
     deinit {
