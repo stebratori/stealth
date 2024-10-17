@@ -9,26 +9,37 @@ import Foundation
 import ReSwift
 
 // Action to update the audio data
-struct UpdateAudioDataAction: Action {
+struct UpdateAudioData: Action {
     let audioData: Data
 }
 
-// Action to update the audio text
-struct UpdateAudioTextAction: Action {
-    let audioText: String
-}
-
 // Action to update the conversation
-struct UpdateConversationAction: Action {
+struct UpdateConversation: Action {
     let conversation: [(role: String, content: String)]
 }
 
-// Action to send user's STT as a prompt to ChatGPT
-struct SendUserTextAction: Action {
-    let text: String
+struct AppendConversationText: Action {
+    let role: String
+    let content: String
+}
+
+struct SetJobDescription: Action {
+    let jobDescription: String
 }
 
 // Action to update the Interview Questions
-struct UpdateInterviewQuestionsAction: Action {
+struct UpdateInterviewQuestions: Action {
     let questions: [String]
+}
+
+struct UpdatePromptTokens: Action {
+    let tokens: Int
+}
+
+struct UpdateCompletionTokens: Action {
+    let tokens: Int
+}
+
+struct UpdateInterviewAnalysis: Action {
+    let text: String
 }

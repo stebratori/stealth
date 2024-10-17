@@ -37,34 +37,19 @@ class InterviewViewController: UIViewController {
         // Handle state change for audioData
         self?.handleNewAudioData(chatGPTState.audioData)
     }
+    
+    private let conversationManager = ConversationManager()
+    
     // kada se doda odgovor chatgpt na postojecu konverzaciju, unmute user
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureAudioSession()
-        synth.delegate = self
-        speechRecognitionService.delegate = self
-        
-        // Start initial conversation
-        let startingPrompt = Constants.startingInterview + "First question: \(store.state.chatGPTState.interviewQuestions.first ?? "")"
-        
-        questionIndex = 1
-        store.dispatch(SendUserTextAction(text: startingPrompt))
-        subscribeToStore()
+        print("[Interview VC] conversationManager.sendInitialPromptAndStartConversation")
+        conversationManager.sendInitialPromptAndStartConversation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        ChatGptAPI.shared.sendConversationAndPlayVoice(store.state.chatGPTState.conversation) { result in
-            switch result {
-            case .success(_):
-                print("[Interview VC] viewDidLoad sendMessageAndPlayVoice result:\(result)")
-                self.playAudioData(audioData: store.state.chatGPTState.audioData)
-                break
-            case .failure(let error):
-                print("[Interview VC] Initial convo error: \(error)")
-                break
-            }
-        }
+
     }
     
     func subscribeToStore() {
@@ -83,11 +68,7 @@ class InterviewViewController: UIViewController {
     }
     
     @IBAction func startStopRecording(_ sender: UIButton) {
-        print("[Interview VC] startStopRecording pressed")
-        debounceTimer?.invalidate() // Cancel any pending timers
-            debounceTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self] _ in
-                self?.toggleRecording(sender)
-            }
+
     }
     
     private func toggleRecording(_ sender: UIButton) {
@@ -97,7 +78,7 @@ class InterviewViewController: UIViewController {
         }
         if isRecordingVoice {
             print("[Interview VC] stopped recording.")
-            speechRecognitionService.stop()
+            //speechRecognitionService.stop()
             isRecordingVoice = false
             sender.setTitle("Unmute", for: .normal)
             sender.backgroundColor = .green
@@ -106,7 +87,7 @@ class InterviewViewController: UIViewController {
             }
         } else {
             print("[Interview VC] started recording...")
-            speechRecognitionService.start()
+            //speechRecognitionService.start()
             isRecordingVoice = true
             sender.setTitle("Mute", for: .normal)
             sender.backgroundColor = .red
@@ -115,20 +96,20 @@ class InterviewViewController: UIViewController {
     
     private func sendMessageToChatGPT(message: String) {
         print("[Interview VC] sendMessageToChatGPT [Conversation Hitstory]: \(message)")
-        store.dispatch(SendUserTextAction(text: message))
+        //store.dispatch(SendUserTextAction(text: message))
         
-        ChatGptAPI.shared.sendConversationAndPlayVoice(store.state.chatGPTState.conversation) { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let (reply, _)):
-                    print("[Interview VC] sendMessageToChatGPT sendMessageAndPlayVoice success. Reply: \(reply)")
-                    self?.updateConversation(with: "ChatGPT: \(reply)")
-                case .failure(let error):
-                    print("[Interview VC] sendMessageToChatGPT sendMessageAndPlayVoice error \(error)")
-                    print(error.localizedDescription)
-                }
-            }
-        }
+//        ChatGptAPI.shared.sendConversationAndPlayVoice(store.state.chatGPTState.conversation) { [weak self] result in
+//            DispatchQueue.main.async {
+//                switch result {
+//                case .success(let (reply, _)):
+//                    print("[Interview VC] sendMessageToChatGPT sendMessageAndPlayVoice success. Reply: \(reply)")
+//                    //self?.updateConversation(with: "ChatGPT: \(reply)")
+//                case .failure(let error):
+//                    print("[Interview VC] sendMessageToChatGPT sendMessageAndPlayVoice error \(error)")
+//                    print(error.localizedDescription)
+//                }
+//            }
+//        }
     }
     
     private func showWaitForYourTurnToTalkNotification() {
@@ -172,7 +153,7 @@ extension InterviewViewController: AVAudioPlayerDelegate {
         print("[Interview VC] startRecording but isSpeakingInProgress!!!")
         guard !isSpeakingInProgress else { return }
         print("[Interview VC] startRecording")
-        speechRecognitionService.start()
+        //speechRecognitionService.start()
         isRecordingVoice = true
         btnRecord.setTitle("Mute", for: .normal)
         btnRecord.backgroundColor = .red
@@ -190,79 +171,79 @@ extension InterviewViewController: AVAudioPlayerDelegate {
     }
 }
 
-extension InterviewViewController: SpeechRecognitionServiceDelegate {
-    func didStopRecording() {
-        print("[Interview VC] SpeechRecognitionServiceDelegate didStopRecording timer?.invalidate()")
-        timer?.invalidate()
-        timer = nil
-    }
-    
-    func didFailWithError(_ error: any Error) {
-        print("InterviewViewController didFailWithError: \(error.localizedDescription)")
-    }
-    
-    func processAudioBuffer(_ buffer: AVAudioPCMBuffer) { }
-    
-    func didReceiveTranscribedText(_ text: String) {
-        lastAnswer = text
+//extension InterviewViewController: SpeechRecognitionServiceDelegate {
+//    func didStopRecording() {
+//        print("[Interview VC] SpeechRecognitionServiceDelegate didStopRecording timer?.invalidate()")
 //        timer?.invalidate()
 //        timer = nil
-//        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false, block: { _ in
-//            self.triggerIdleTimer()
-//        })
-    }
-
-    
-    func recordingDidStop() {
-        
-    }
-
-    private func triggerIdleTimer() {
-       // speakNextQuestion()
-    }
-}
-
-extension InterviewViewController: AVSpeechSynthesizerDelegate {
-    
-    private func speak(text: String, withDelay delay: Double?) {
-        let speakUtterance = AVSpeechUtterance(string: text)
-        if let delay = delay {
-            speakUtterance.preUtteranceDelay = delay
-        }
-        speakUtterance.volume = 1
-        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .voicePrompt, options: [])
-        synth.speak(speakUtterance)
-        print("[Interview VC] speak: \(text)")
-    }
-
-    
-    func finishTheInterview() {
-        performSegue(withIdentifier: "segueToAnalysis", sender: self)
-    }
-    
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
-        print("[Interview VC] speechSynthesizer didStart")
-        isSpeakingInProgress = true
-    }
-    
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {     
-        print("[Interview VC] speechSynthesizer didFinish")
-        if isSpeakingWelcomeNote {
-            isSpeakingWelcomeNote = false
-            print("[Interview VC] speechSynthesizer didFinish ")
-        } else if isSpeakingEndingNote {
-            isSpeakingEndingNote = false
-            finishTheInterview()
-            print("[Interview VC] speechSynthesizer didFinish isSpeakingEndingNote")
-        }
-        isSpeakingInProgress = false
-
-        // Continue the conversation
-        if let lastAnswer = lastAnswer {
-            print("[Interview VC] speechSynthesizer sendMessageToChatGPT: \(lastAnswer)")
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                self.sendMessageToChatGPT(message: lastAnswer)
-            }
-        }
-    }
-}
+//    }
+//    
+//    func didFailWithError(_ error: any Error) {
+//        print("InterviewViewController didFailWithError: \(error.localizedDescription)")
+//    }
+//    
+//    func processAudioBuffer(_ buffer: AVAudioPCMBuffer) { }
+//    
+//    func didReceiveTranscribedText(_ text: String) {
+//        lastAnswer = text
+////        timer?.invalidate()
+////        timer = nil
+////        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false, block: { _ in
+////            self.triggerIdleTimer()
+////        })
+//    }
+//
+//    
+//    func recordingDidStop() {
+//        
+//    }
+//
+//    private func triggerIdleTimer() {
+//       // speakNextQuestion()
+//    }
+//}
+//
+//extension InterviewViewController: AVSpeechSynthesizerDelegate {
+//    
+//    private func speak(text: String, withDelay delay: Double?) {
+//        let speakUtterance = AVSpeechUtterance(string: text)
+//        if let delay = delay {
+//            speakUtterance.preUtteranceDelay = delay
+//        }
+//        speakUtterance.volume = 1
+//        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .voicePrompt, options: [])
+//        synth.speak(speakUtterance)
+//        print("[Interview VC] speak: \(text)")
+//    }
+//
+//    
+//    func finishTheInterview() {
+//        performSegue(withIdentifier: "segueToAnalysis", sender: self)
+//    }
+//    
+//    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+//        print("[Interview VC] speechSynthesizer didStart")
+//        isSpeakingInProgress = true
+//    }
+//    
+//    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {     
+//        print("[Interview VC] speechSynthesizer didFinish")
+//        if isSpeakingWelcomeNote {
+//            isSpeakingWelcomeNote = false
+//            print("[Interview VC] speechSynthesizer didFinish ")
+//        } else if isSpeakingEndingNote {
+//            isSpeakingEndingNote = false
+//            finishTheInterview()
+//            print("[Interview VC] speechSynthesizer didFinish isSpeakingEndingNote")
+//        }
+//        isSpeakingInProgress = false
+//
+//        // Continue the conversation
+//        if let lastAnswer = lastAnswer {
+//            print("[Interview VC] speechSynthesizer sendMessageToChatGPT: \(lastAnswer)")
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//                self.sendMessageToChatGPT(message: lastAnswer)
+//            }
+//        }
+//    }
+//}

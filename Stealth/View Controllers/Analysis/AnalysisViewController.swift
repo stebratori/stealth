@@ -6,22 +6,18 @@
 //
 
 import UIKit
-import AVFoundation
 
 class AnalysisViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var lblTotalTokensSpent: UILabel!
+    var analysisText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(analysisComplete),
-                                               name: Notification.Name(Constants.NotificationName.analysisDone),
-                                               object: nil)
-//        Task {
-//            await AIKitService.shared.createAnalysis()
-//        }
+        calculatePrice()
+        textView.text = store.state.chatGPTState.interviewAnalysis
     }
+
     
     @IBAction func generateNewJD(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
@@ -31,23 +27,12 @@ class AnalysisViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    @objc
-    func analysisComplete() {
-//        if let analysis = QuestionsAndAnswersService.current.analysis {
-//            DispatchQueue.main.async {
-//                self.textView.text = analysis
-//                self.lblTotalTokensSpent.text = "Total tokens spent: \(AIKitService.shared.tokens) \n(Price for .gpt4 is $0.03-$0.06/1000tokens)"
-//            }
-//        }
-    }
-
-    private func speak(text: String, withDelay delay: Double?) {
-        let synth = AVSpeechSynthesizer()
-        let speakUtterance = AVSpeechUtterance(string: text)
-        if let delay = delay {
-            speakUtterance.preUtteranceDelay = delay
-        }
-        speakUtterance.volume = 1
-        synth.speak(speakUtterance)
+    private func calculatePrice() {
+        let promptTokens = store.state.chatGPTState.promptTokens
+        let completionTokens = store.state.chatGPTState.completionTokens
+        let promptTokensPrice = Double(promptTokens) * 0.03 / 1000
+        let completionTokensPrice = Double(completionTokens) * 0.06 / 1000
+        let total =  completionTokensPrice + promptTokensPrice
+        lblTotalTokensSpent.text = "promptTokens spent: \(promptTokens) ($0.03/1000) \ncompletionTokens spent: \(completionTokens) ($0.06/1000)\nTotal: $\(total)"
     }
 }

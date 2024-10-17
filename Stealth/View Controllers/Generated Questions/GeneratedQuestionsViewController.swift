@@ -24,7 +24,7 @@ class GeneratedQuestionsViewController: UIViewController {
     }
 
     @IBAction func startTheInterview(_ sender: UIButton) {
-        performSegue(withIdentifier: "segueToInterview", sender: self)
+        performSegue(withIdentifier: "segueToSystemPrompt", sender: self)
     }
     
     @IBAction func unwindToGeneratedQuestions(segue: UIStoryboardSegue) {}

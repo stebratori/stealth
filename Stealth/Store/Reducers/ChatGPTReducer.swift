@@ -9,17 +9,23 @@ import Foundation
 import ReSwift
 
 func chatGPTReducer(action: Action, state: ChatGPTState?) -> ChatGPTState {
-    var state = state ?? ChatGPTState()
+    var state = state ?? ChatGPTState(jobDescription: "")
 
     switch action {
-    case let action as UpdateAudioDataAction:
+    case let action as UpdateAudioData:
         state.audioData = action.audioData
-    case let action as UpdateAudioTextAction:
-        state.audioText = action.audioText
-    case let action as UpdateConversationAction:
+    case let action as UpdateConversation:
         state.conversation = action.conversation
-    case let action as UpdateInterviewQuestionsAction:
+    case let action as UpdateInterviewQuestions:
         state.interviewQuestions = action.questions
+    case let action as SetJobDescription:
+        state.jobDescription = action.jobDescription
+    case let action as UpdatePromptTokens:
+        state.promptTokens = action.tokens
+    case let action as UpdateCompletionTokens:
+        state.completionTokens = action.tokens
+    case let action as UpdateInterviewAnalysis:
+        state.interviewAnalysis = action.text
     default:
         break
     }

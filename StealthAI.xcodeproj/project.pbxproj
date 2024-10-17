@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F10E74E22CB82EB600FD3924 /* ConversationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E74E12CB82EB600FD3924 /* ConversationManager.swift */; };
+		F10E74E42CB8306B00FD3924 /* PromptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E74E32CB8306B00FD3924 /* PromptManager.swift */; };
 		F1152E922CAB3CB8006867C3 /* CircleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152E912CAB3CB8006867C3 /* CircleAnimationView.swift */; };
-		F1152E942CAB3CE7006867C3 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152E932CAB3CE7006867C3 /* HomePageViewController.swift */; };
 		F1152E972CAC00CD006867C3 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1152E962CAC00CD006867C3 /* ReSwift */; };
 		F1152E9B2CAC0106006867C3 /* ChatGPTState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152E9A2CAC0106006867C3 /* ChatGPTState.swift */; };
 		F1152E9E2CAC0150006867C3 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1152E9D2CAC0150006867C3 /* Actions.swift */; };
@@ -23,7 +24,15 @@
 		F119669E2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F119669D2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift */; };
 		F11966A12C9B317700790EAB /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11966A02C9B317700790EAB /* AnalysisViewController.swift */; };
 		F11966A32C9C44B200790EAB /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11966A22C9C44B200790EAB /* SpeechRecognitionService.swift */; };
+		F14DFA612CBD581700E68D44 /* Extensions+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DFA602CBD581700E68D44 /* Extensions+String.swift */; };
+		F14DFA642CBD83A000E68D44 /* SystemPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DFA632CBD83A000E68D44 /* SystemPromptViewController.swift */; };
 		F15A0FB92CAADFDB00E61674 /* ChatGptAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A0FB82CAADFDB00E61674 /* ChatGptAPI.swift */; };
+		F16F97692CBFC45900E9C997 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F97682CBFC45900E9C997 /* Extensions+UIViewController.swift */; };
+		F16F976B2CBFC74F00E9C997 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F976A2CBFC74F00E9C997 /* Logger.swift */; };
+		F16F976D2CBFE9D000E9C997 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F976C2CBFE9D000E9C997 /* NetworkMonitor.swift */; };
+		F1C5E2052CB94E7100994133 /* NewInterviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C5E2042CB94E7100994133 /* NewInterviewViewController.xib */; };
+		F1C5E2062CB94E7100994133 /* NewInterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5E2032CB94E7100994133 /* NewInterviewViewController.swift */; };
+		F1C5E20A2CB9557F00994133 /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5E2092CB9557F00994133 /* AudioPlayerService.swift */; };
 		F1DDDAAD2C99C32D00C7F7A3 /* Talkify in Frameworks */ = {isa = PBXBuildFile; productRef = F1DDDAAC2C99C32D00C7F7A3 /* Talkify */; };
 		F1DDDAB82C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAB72C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift */; };
 		F1DDDABA2C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DDDAB92C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift */; };
@@ -41,8 +50,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F10E74E12CB82EB600FD3924 /* ConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManager.swift; sourceTree = "<group>"; };
+		F10E74E32CB8306B00FD3924 /* PromptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptManager.swift; sourceTree = "<group>"; };
 		F1152E912CAB3CB8006867C3 /* CircleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnimationView.swift; sourceTree = "<group>"; };
-		F1152E932CAB3CE7006867C3 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		F1152E9A2CAC0106006867C3 /* ChatGPTState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTState.swift; sourceTree = "<group>"; };
 		F1152E9D2CAC0150006867C3 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		F1152EA02CAC0179006867C3 /* ChatGPTReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTReducer.swift; sourceTree = "<group>"; };
@@ -56,7 +66,15 @@
 		F119669D2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterviewViewController+SpeechToText.swift"; sourceTree = "<group>"; };
 		F11966A02C9B317700790EAB /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		F11966A22C9C44B200790EAB /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
+		F14DFA602CBD581700E68D44 /* Extensions+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+String.swift"; sourceTree = "<group>"; };
+		F14DFA632CBD83A000E68D44 /* SystemPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemPromptViewController.swift; sourceTree = "<group>"; };
 		F15A0FB82CAADFDB00E61674 /* ChatGptAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptAPI.swift; sourceTree = "<group>"; };
+		F16F97682CBFC45900E9C997 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
+		F16F976A2CBFC74F00E9C997 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F16F976C2CBFE9D000E9C997 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		F1C5E2032CB94E7100994133 /* NewInterviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInterviewViewController.swift; sourceTree = "<group>"; };
+		F1C5E2042CB94E7100994133 /* NewInterviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewInterviewViewController.xib; sourceTree = "<group>"; };
+		F1C5E2092CB9557F00994133 /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
 		F1DDDAB72C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedQuestionsViewController.swift; sourceTree = "<group>"; };
 		F1DDDAB92C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDescriptionUploadViewController.swift; sourceTree = "<group>"; };
 		F1DDDABC2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewQuestionTableViewCell.swift; sourceTree = "<group>"; };
@@ -154,9 +172,8 @@
 		F119669A2C9B0AE000790EAB /* Interview */ = {
 			isa = PBXGroup;
 			children = (
-				F1F352632C917B5900731CF7 /* InterviewViewController.swift */,
-				F119669D2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift */,
-				F119669B2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift */,
+				F1C5E2082CB94E8200994133 /* Old */,
+				F1C5E2072CB94E7500994133 /* New */,
 			);
 			path = Interview;
 			sourceTree = "<group>";
@@ -169,13 +186,49 @@
 			path = Analysis;
 			sourceTree = "<group>";
 		};
+		F14DFA5F2CBD580700E68D44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F14DFA602CBD581700E68D44 /* Extensions+String.swift */,
+				F16F97682CBFC45900E9C997 /* Extensions+UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F14DFA622CBD838800E68D44 /* System Prompt */ = {
+			isa = PBXGroup;
+			children = (
+				F14DFA632CBD83A000E68D44 /* SystemPromptViewController.swift */,
+			);
+			path = "System Prompt";
+			sourceTree = "<group>";
+		};
+		F1C5E2072CB94E7500994133 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				F1C5E2032CB94E7100994133 /* NewInterviewViewController.swift */,
+				F1C5E2042CB94E7100994133 /* NewInterviewViewController.xib */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		F1C5E2082CB94E8200994133 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				F1F352632C917B5900731CF7 /* InterviewViewController.swift */,
+				F119669D2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift */,
+				F119669B2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
 		F1DDDAB22C99E75E00C7F7A3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F1152E932CAB3CE7006867C3 /* HomePageViewController.swift */,
 				F1DDDAB32C99E76600C7F7A3 /* JD Upload */,
 				F1DDDAB42C99E77300C7F7A3 /* Generated Questions */,
 				F1DDDAC22C99EA7C00C7F7A3 /* Edit Question */,
+				F14DFA622CBD838800E68D44 /* System Prompt */,
 				F119669A2C9B0AE000790EAB /* Interview */,
 				F119669F2C9B316400790EAB /* Analysis */,
 			);
@@ -204,6 +257,11 @@
 			children = (
 				F11966A22C9C44B200790EAB /* SpeechRecognitionService.swift */,
 				F15A0FB82CAADFDB00E61674 /* ChatGptAPI.swift */,
+				F10E74E12CB82EB600FD3924 /* ConversationManager.swift */,
+				F10E74E32CB8306B00FD3924 /* PromptManager.swift */,
+				F1C5E2092CB9557F00994133 /* AudioPlayerService.swift */,
+				F16F976A2CBFC74F00E9C997 /* Logger.swift */,
+				F16F976C2CBFE9D000E9C997 /* NetworkMonitor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -252,6 +310,7 @@
 				F1F3526A2C917B5900731CF7 /* LaunchScreen.storyboard */,
 				F1F352762C91A35500731CF7 /* Constants.swift */,
 				F1152E982CAC00D7006867C3 /* Store */,
+				F14DFA5F2CBD580700E68D44 /* Extensions */,
 				F1DDDAB52C99E78700C7F7A3 /* Services */,
 				F1152E8F2CAB3C94006867C3 /* Views */,
 				F1DDDAB22C99E75E00C7F7A3 /* View Controllers */,
@@ -331,6 +390,7 @@
 				F1F3526C2C917B5900731CF7 /* Base in Resources */,
 				F1F352672C917B5900731CF7 /* Base in Resources */,
 				F1DDDABF2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.xib in Resources */,
+				F1C5E2052CB94E7100994133 /* NewInterviewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,16 +401,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16F976B2CBFC74F00E9C997 /* Logger.swift in Sources */,
+				F16F976D2CBFE9D000E9C997 /* NetworkMonitor.swift in Sources */,
 				F1DDDAC42C99EA9700C7F7A3 /* EditQuestionViewController.swift in Sources */,
+				F10E74E42CB8306B00FD3924 /* PromptManager.swift in Sources */,
 				F1152EAD2CAC2289006867C3 /* MyCameraView.swift in Sources */,
 				F1152E922CAB3CB8006867C3 /* CircleAnimationView.swift in Sources */,
 				F1F352642C917B5900731CF7 /* InterviewViewController.swift in Sources */,
 				F1152EAB2CAC09DA006867C3 /* AnonymousStoreSubscriber.swift in Sources */,
-				F1152E942CAB3CE7006867C3 /* HomePageViewController.swift in Sources */,
+				F14DFA642CBD83A000E68D44 /* SystemPromptViewController.swift in Sources */,
 				F1152EAF2CAC2C6D006867C3 /* EqualizerWaveView.swift in Sources */,
 				F1152EA12CAC0179006867C3 /* ChatGPTReducer.swift in Sources */,
 				F119669C2C9B0C2800790EAB /* InterviewViewController+TextToSpeech.swift in Sources */,
 				F15A0FB92CAADFDB00E61674 /* ChatGptAPI.swift in Sources */,
+				F1C5E20A2CB9557F00994133 /* AudioPlayerService.swift in Sources */,
+				F16F97692CBFC45900E9C997 /* Extensions+UIViewController.swift in Sources */,
 				F1152E9E2CAC0150006867C3 /* Actions.swift in Sources */,
 				F1152EA32CAC019A006867C3 /* AppReducer.swift in Sources */,
 				F1DDDAB82C99E7C200C7F7A3 /* GeneratedQuestionsViewController.swift in Sources */,
@@ -361,9 +426,12 @@
 				F1152EA82CAC0571006867C3 /* conversationMiddleware.swift in Sources */,
 				F11966A32C9C44B200790EAB /* SpeechRecognitionService.swift in Sources */,
 				F1152EA52CAC01B1006867C3 /* AppState.swift in Sources */,
+				F1C5E2062CB94E7100994133 /* NewInterviewViewController.swift in Sources */,
 				F119669E2C9B0DEC00790EAB /* InterviewViewController+SpeechToText.swift in Sources */,
+				F14DFA612CBD581700E68D44 /* Extensions+String.swift in Sources */,
 				F1F352772C91A35500731CF7 /* Constants.swift in Sources */,
 				F1DDDABA2C99E7DA00C7F7A3 /* JobDescriptionUploadViewController.swift in Sources */,
+				F10E74E22CB82EB600FD3924 /* ConversationManager.swift in Sources */,
 				F1DDDABE2C99E80500C7F7A3 /* InterviewQuestionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,7 +583,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7M86T7GAGU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Stealth/Info.plist;
@@ -547,7 +615,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7M86T7GAGU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Stealth/Info.plist;

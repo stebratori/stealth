@@ -9,6 +9,8 @@ import UIKit
 import ReSwift
 
 var store: Store<AppState>!
+let logger: Logger = Logger()
+let networkMonitor: NetworkMonitor = NetworkMonitor()
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
