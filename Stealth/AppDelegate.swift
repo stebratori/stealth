@@ -19,8 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Disable automatic screen lock while app is active
+        UIApplication.shared.isIdleTimerDisabled = true
+        // Start Firebase services
         FirebaseApp.configure()
+        // Setup the Redux Store
         store = Store(
             reducer: appReducer,
             state: nil,
@@ -43,6 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func applicationWillResignActive(_ application: UIApplication) {
+           // Optionally, re-enable the idle timer when the app is about to become inactive
+           UIApplication.shared.isIdleTimerDisabled = false
+       }
 
+       func applicationDidBecomeActive(_ application: UIApplication) {
+           // Disable the idle timer again when the app becomes active
+           UIApplication.shared.isIdleTimerDisabled = true
+       }
 }
 
